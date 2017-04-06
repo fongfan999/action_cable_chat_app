@@ -5,7 +5,9 @@ App.room = App.cable.subscriptions.create "RoomChannel",
   disconnected: ->
     # Called when the subscription has been terminated by the server
 
+
   received: (data) ->
+    alert("You have a new mention") if data.mention
     # Called when there's incoming data on the websocket for this channel
     unless data.message.blank?
       $('#messages-table').append data.message
