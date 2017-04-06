@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta charset="utf-8">
   </head>
-
+  
   <body>
     <% flash.each do |message_type, message| %>
       <div class="alert alert-<%= message_type %> animatedDelay fadeOutUp"><%= message %></div>
